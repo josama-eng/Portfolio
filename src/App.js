@@ -5,6 +5,7 @@ import Nav from "./components/Nav";
 import Projects from "./pages/Projects";
 import { Switch, Route, useLocation } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
+
 function App() {
   const location = useLocation();
 

@@ -12,9 +12,24 @@ import sajt7 from "../img/sajt7.png";
 import sajt8 from "../img/sajt8.png";
 //Animations
 import { motion } from "framer-motion";
-import { pageAnim, fade, photoAnim, Line, slider } from "../Animation";
-
+import {
+  pageAnim,
+  fade,
+  photoAnim,
+  Line,
+  slider,
+  scrollRev,
+} from "../Animation";
+import { useScroll } from "../components/UseScroll";
+import ScrollTop from "../components/Top";
 const Projects = () => {
+  const [element, controls] = useScroll();
+  const [element2, controls2] = useScroll();
+  const [element3, controls3] = useScroll();
+  const [element4, controls4] = useScroll();
+  const [element5, controls5] = useScroll();
+  const [element6, controls6] = useScroll();
+  const [element7, controls7] = useScroll();
   return (
     <Work
       variants={pageAnim}
@@ -37,55 +52,91 @@ const Projects = () => {
           </Hide>
         </a>
       </Project>
-      <Project>
+      <Project
+        ref={element}
+        variants={scrollRev}
+        animate={controls}
+        initial="hidden"
+      >
         <h2>Weather App</h2>
-        <div className="line"></div>
+        <motion.div className="line" variants={Line}></motion.div>
         <a href="https://www.samardzic.in.rs/Vremenska-prognoza/">
           <img src={sajt2} alt="sajt" />
         </a>
       </Project>
-      <Project>
+      <Project
+        ref={element2}
+        variants={scrollRev}
+        animate={controls2}
+        initial="hidden"
+      >
         <h2>Restorant</h2>
-        <div className="line"></div>
+        <motion.div className="line" variants={Line}></motion.div>
         <a href="https://www.samardzic.in.rs/Restourant-Site/">
           <img src={sajt3} alt="sajt" />
         </a>
       </Project>
-      <Project>
+      <Project
+        ref={element3}
+        variants={scrollRev}
+        animate={controls3}
+        initial="hidden"
+      >
         <h2>Cistunac</h2>
-        <div className="line"></div>
+        <motion.div className="line" variants={Line}></motion.div>
         <a href="http://cistunac.iswdesign.com/">
           <img src={sajt4} alt="sajt" />
         </a>
       </Project>
-      <Project>
+      <Project
+        ref={element4}
+        variants={scrollRev}
+        animate={controls4}
+        initial="hidden"
+      >
         <h2>ISWork Shop</h2>
-        <div className="line"></div>
+        <motion.div className="line" variants={Line}></motion.div>
         <a href="http://www.isworkshop.net/">
           <img src={sajt5} alt="sajt" />
         </a>
       </Project>
-      <Project>
+      <Project
+        ref={element5}
+        variants={scrollRev}
+        animate={controls5}
+        initial="hidden"
+      >
         <h2>Music</h2>
-        <div className="line"></div>
+        <motion.div className="line" variants={Line}></motion.div>
         <a href="https://www.samardzic.in.rs/Music/">
           <img src={sajt6} alt="sajt" />
         </a>
       </Project>
-      <Project>
+      <Project
+        ref={element6}
+        variants={scrollRev}
+        animate={controls6}
+        initial="hidden"
+      >
         <h2>BabyLand</h2>
-        <div className="line"></div>
+        <motiondiv className="line" variants={Line}></motiondiv>
         <a href="https://www.samardzic.in.rs/Baby-Store/">
           <img src={sajt7} alt="sajt" />
         </a>
       </Project>
-      <Project>
+      <Project
+        ref={element7}
+        variants={scrollRev}
+        animate={controls7}
+        initial="hidden"
+      >
         <h2>Hiking</h2>
-        <div className="line"></div>
+        <motion.div className="line" variants={Line}></motion.div>
         <a href="https://www.samardzic.in.rs/planinarenje/">
           <img src={sajt8} alt="sajt" />
         </a>
       </Project>
+      <ScrollTop />
     </Work>
   );
 };
@@ -98,7 +149,7 @@ const Work = styled(motion.div)`
   }
 `;
 
-const Project = styled.div`
+const Project = styled(motion.div)`
   padding-bottom: 10rem;
   img {
     width: 100%;

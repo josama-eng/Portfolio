@@ -3,9 +3,18 @@ import teh from "../img/tehnologies.png";
 import programming from "../img/programming.jpg";
 import { About, Description, Image, Hide } from "../styles";
 import styled from "styled-components";
+import { useScroll } from "./UseScroll";
+import { fade, scrollRev } from "../Animation";
+
 const TehnologiesSection = () => {
+  const [element, controls] = useScroll();
   return (
-    <Tehnoligies>
+    <Tehnoligies
+      variants={fade}
+      animate={controls}
+      initial="hidden"
+      ref={element}
+    >
       <Description>
         <h2>
           <span>Tehnologies</span> I'm familiar with
