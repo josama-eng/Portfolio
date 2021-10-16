@@ -1,11 +1,12 @@
 import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
+import Logo from "../img/logo.png";
 const Nav = () => {
   return (
     <Navrbar>
-      <Link id="logo" to="/">
-        jSam
+      <Link to="/">
+        <img src={Logo} alt="" id="logo" />
       </Link>
 
       <ul>
@@ -36,9 +37,7 @@ const Navrbar = styled.nav`
     list-style: none;
   }
   #logo {
-    font-family: "Lobster", cursive;
-    font-size: 1.5rem;
-    font-weight: lighter;
+    width: 150px;
   }
   li {
     padding-left: 5rem;

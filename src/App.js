@@ -3,20 +3,25 @@ import AboutMe from "./pages/AboutMe";
 import GlobalStyle from "./components/GlobalStyle";
 import Nav from "./components/Nav";
 import Projects from "./pages/Projects";
-import { Switch, Route } from "react-router-dom";
+import { Switch, Route, useLocation } from "react-router-dom";
+import { AnimatePresence } from "framer-motion";
 function App() {
+  const location = useLocation();
+
   return (
     <div className="App">
       <GlobalStyle />
       <Nav />
-      <Switch>
-        <Route path="/" exact>
-          <AboutMe />
-        </Route>
-        <Route path="/Projects">
-          <Projects />
-        </Route>
-      </Switch>
+      <AnimatePresence exitBeforeEnter>
+        <Switch location={location} key={location.pathname}>
+          <Route path="/" exact>
+            <AboutMe />
+          </Route>
+          <Route path="/Projects">
+            <Projects />
+          </Route>
+        </Switch>
+      </AnimatePresence>
     </div>
   );
 }
