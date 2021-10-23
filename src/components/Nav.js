@@ -11,10 +11,10 @@ const Nav = () => {
 
       <ul>
         <li>
-          <Link to="/">About Me</Link>
+          <Link to="/">About me</Link>
         </li>
         <li>
-          <Link to="/projects">Projects</Link>
+          <Link to="/projects">My projects</Link>
         </li>
       </ul>
     </Navrbar>
@@ -47,7 +47,7 @@ const Navrbar = styled.nav`
     position: relative;
   }
   @media (max-width: 1300px) {
-    padding: 2rem 1rem;
+    padding: 2rem 5rem;
     #logo {
       width: 100px;
     }
@@ -59,6 +59,9 @@ const Navrbar = styled.nav`
         padding-left: 2rem;
       }
     }
+  }
+  @media (max-width: 400px) {
+    padding: 2rem 1rem;
   }
 `;
 export default Nav;

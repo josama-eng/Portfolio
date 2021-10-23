@@ -28,7 +28,10 @@ const AboutSection = () => {
             aspernatur.
           </motion.p>
         </motion.div>
-        <motion.button variants={fade}>Contact me</motion.button>
+        <motion.button variants={fade}>
+          {" "}
+          <a href="mailto:jovana@samardzic.in.rs">Contact me</a>{" "}
+        </motion.button>
       </Description>
       <Image>
         <motion.img variants={photoAnim} src={me} alt="" />

@@ -32,9 +32,24 @@ const FaqSection = () => {
         <Toggle title="Few things about me">
           <div className="answer">
             <p>
-              My name is Jovana, I come from Novi Sad, Serbia. When it comes to
-              my personal life I'm an open- minded person who likes a good book,
-              Sci-Fi movies and spending time in nature.
+              My name is Jovana, I'm located in Novi Sad,Serbia. I'm 27 years
+              old. When it comes to my personal life I'm an open- minded person
+              who likes a good book, Sci-Fi movies and spending time in
+              nature.Interested in the entire frontend spectrum and working on
+              ambitious projects with positive people.
+            </p>
+          </div>
+        </Toggle>
+        <Toggle title="My work">
+          <div className="answer">
+            <p>
+              As a self-taught developer, I have learned to manage and find
+              solutions to problems quickly and on time. I create successful
+              websites that are fast, easy to use, and built with best
+              practices.My main experience is in front-end development but I
+              also have a passion for back-end development. I have serious
+              passion for UI effects, animations and creating intuitive, dynamic
+              user experiences.
             </p>
           </div>
         </Toggle>
