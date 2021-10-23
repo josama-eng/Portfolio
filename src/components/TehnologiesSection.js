@@ -80,9 +80,6 @@ const TehnologiesSection = () => {
           </Card>
         </Cards>
       </Description>
-      {/* <Image>
-        <img src={programming} alt="" />
-      </Image> */}
     </Tehnoligies>
   );
 };
@@ -119,6 +116,9 @@ const Tehnoligies = styled(About)`
 const Cards = styled.div`
   display: flex;
   flex-wrap: wrap;
+  @media (max-width: 1300px) {
+    justify-content: center;
+  }
 `;
 
 const Card = styled.div`
@@ -133,6 +133,12 @@ const Card = styled.div`
   padding: 2rem 0rem;
   p {
     text-align: center;
+  }
+  @media (max-width: 1300px) {
+    width: 40%;
+  }
+  @media (max-width: 600px) {
+    width: 90%;
   }
 `;
 export default TehnologiesSection;

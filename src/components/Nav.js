@@ -46,5 +46,19 @@ const Navrbar = styled.nav`
     padding-left: 5rem;
     position: relative;
   }
+  @media (max-width: 1300px) {
+    padding: 2rem 1rem;
+    #logo {
+      width: 100px;
+    }
+    ul {
+      padding: 3rem 0rem;
+      width: 100%;
+      justify-content: flex-end;
+      li {
+        padding-left: 2rem;
+      }
+    }
+  }
 `;
 export default Nav;

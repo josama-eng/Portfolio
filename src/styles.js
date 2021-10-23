@@ -9,6 +9,11 @@ export const About = styled(motion.div)`
   padding: 5rem;
   color: #ffffff;
   width: 100%;
+  @media (max-width: 1300px) {
+    display: block;
+    padding: 2rem;
+    text-align: center;
+  }
 `;
 export const Description = styled.div`
   flex: 1;
@@ -16,6 +21,12 @@ export const Description = styled.div`
   z-index: 2;
   h2 {
     font-weight: lighter;
+  }
+  @media (max-width: 1300px) {
+    padding: 0;
+    button {
+      margin: 2rem 0rem 5rem 0rem;
+    }
   }
 `;
 
@@ -28,6 +39,13 @@ export const Image = styled.div`
   flex: 1;
   overflow: hidden;
   z-index: 2;
+  @media (max-width: 800px) {
+    img {
+      width: 100%;
+      height: 90vh;
+      object-fit: cover;
+    }
+  }
 `;
 
 export const Hide = styled.div`
